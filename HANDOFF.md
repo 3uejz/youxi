@@ -3,6 +3,8 @@
 > 工程：`D:\世界\世界`（`config/name="World Sim"`）
 > 引擎：Godot **4.7.2-stable mono** — `D:\Godot\Godot_v4.7.2-stable_mono_win64(_console).exe`
 > 整理时间：2026-10-05
+>
+> 📋 **接下来怎么做 → 见 [`方案.md`](方案.md)**（路线图 M0–M3、5 个待拍板决策、技术约定）
 
 ---
 
