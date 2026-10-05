@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/economy_system.gd" id="1_economy"]
+[ext_resource type="Script" path="res://scripts/player_character.gd" id="2_player"]
+[ext_resource type="Script" path="res://scripts/world_sim_hud.gd" id="3_hud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(32, 32)
+
+[node name="WorldSim" type="Node2D"]
+
+[node name="EconomySystem" type="Node2D" parent="." groups=["economy_system"]]
+script = ExtResource("1_economy")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_player")
+
+[node name="Body" type="Polygon2D" parent="Player"]
+color = Color(0.35, 0.7, 1, 1)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="MacroPanel" type="PanelContainer" parent="HUD"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 712.0
+offset_bottom = 52.0
+
+[node name="MacroLabel" type="Label" parent="HUD/MacroPanel"]
+layout_mode = 2
+text = "经济系统加载中…"
+script = ExtResource("3_hud")

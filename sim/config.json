@@ -1,0 +1,7 @@
+{
+  "gdp_growth": 0.025,
+  "base_inflation": 0.015,
+  "unemployment_rate": 0.04,
+  "pmi_base": 55.0,
+  "quarters_per_year": 4
+}
